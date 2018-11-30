@@ -52,7 +52,7 @@ public class gridBehavior : MonoBehaviour {
         {
             print("Direction key presed. Starting Collider check");
             RaycastHit2D hit = checkCollide(directionX, directionY);
-            if (hit.collider)
+            if (hit.collider && hit.collider.gameObject.tag == "playerMovable")
             {
                 Debug.Log(hit.collider.name);
                 GameObject collidedObject = hit.collider.gameObject;
